@@ -1,0 +1,21 @@
+This repository includes the common tools (python scripts, etc) used by Tart GUI developers to develop and maintain their code.
+
+Closure Linter is a Python script developed by Google to impose their Javascript Style Guide. We have changed some minor styling issues to fit our taste. Clone the repository and follow its own README to properly setup and use the linter.
+
+Closure Linter comes with two tools. One is a style checker named "gjslint" and the other is a style fixer called "fixjsstyle". These tools are essential at making sure the code in the repository is well styled and documented.
+
+gjslint checks any given Javascript file or a directory of Javascript files against the Tart Javascript Style Guide (which is, as stated above, based on the Google Javascript Style Guide) and reports any errors.
+
+Some of these errors are VERY ANNOYING, e.g, forgotten semi-colons after functions, forgotten spaces or wrong indentation. Fortunately, Google has provided us with "fixjsstyle" tool.
+
+fixjsstyle corrects most of the errors reported by gjslint; although some errors are impossible to correct by such a program (such as missing JSDocs).
+
+So the ideal workflow is,
+a) write your code
+b) run gjslint on it
+c) if necessary, run fixjsstyle
+d) if necessary, clear other errors by hand
+e) run gjslint on it again, making sure it passes without errors *and warnings*
+f) commit your code
+
+The pull requests will be turned down if your commits do not adhere to the Tart style.
