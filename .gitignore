@@ -1,1 +1,4 @@
 *.pyc
+closure_linter/build/
+closure_linter/closure_linter.egg-info/
+closure_linter/dist/
